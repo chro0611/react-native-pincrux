@@ -5,6 +5,8 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.Promise
 
+import com.pincrux.offerwall.PincruxOfferwall
+
 class PincruxModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
 
     override fun getName(): String {
@@ -19,6 +21,4 @@ class PincruxModule(reactContext: ReactApplicationContext) : ReactContextBaseJav
       promise.resolve(a * b)
     
     }
-
-    
 }

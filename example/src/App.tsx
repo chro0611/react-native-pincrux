@@ -1,25 +1,29 @@
 import * as React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
-import Pincrux from 'pincrux';
+import { StyleSheet, View, Button, ScrollView } from 'react-native';
+import RNPincrux from 'pincrux';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    Pincrux.multiply(3, 7).then(setResult);
-  }, []);
-
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
+    <ScrollView style={styles.container}>
+      <View style={styles.height500}>
+        <RNPincrux
+          user="test"
+          style={styles.height500}
+          height={500}
+        />
+      </View>
+      <View>
+        <Button onPress={() => console.log('test')} title={'Test0'} />
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+  },
+  height500: {
+    height: 500,
   },
 });

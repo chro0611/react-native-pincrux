@@ -1,7 +1,7 @@
 {
-  "name": "pincrux",
+  "name": "react-native-pincrux",
   "version": "0.1.0",
-  "description": "react antive pincrux module",
+  "description": "react native pincrux module",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
@@ -72,12 +72,6 @@
       "<rootDir>/example/node_modules",
       "<rootDir>/lib/"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn lint && yarn typescript"
-    }
   },
   "commitlint": {
     "extends": [

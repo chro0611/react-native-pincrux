@@ -55,6 +55,10 @@ repositories {
   jcenter()
   google()
 
+  flatDir{
+    dirs 'src/main/libs'
+  }
+
   def found = false
   def defaultDir = null
   def androidSourcesName = 'React Native sources'
@@ -124,7 +128,9 @@ repositories {
 def kotlin_version = getExtOrDefault('kotlinVersion')
 
 dependencies {
+
   // noinspection GradleDynamicVersion
   api 'com.facebook.react:react-native:+'
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+  implementation "com.pincrux.offerwall:pincrux_offerwall@aar"
 }
